@@ -30,7 +30,9 @@ git status
 git add prj.txt
 git revert --continue
 
+open prj.txt file and remove line //>> and bad commit
 press Esc and type :wq
+
 
 git log --oneline
 

@@ -1,0 +1,35 @@
+exp 10
+git --version
+git status
+
+mkdir GitAuthorDemo
+cd GitAuthorDemo
+git init
+
+git config user.name "JohnDoe"
+git config user.email "johndoe@example.com"
+git config --list
+
+echo "Initial content" > project.txt
+git add project.txt
+GIT_AUTHOR_DATE="2023-03-15T10:00:00" GIT_COMMITTER_DATE="2023-03-15T10:00:00" git commit -m "JohnDoe: Initial project setup"
+
+echo "Feature 1" >> project.txt
+git add project.txt
+GIT_AUTHOR_DATE="2023-06-20T14:30:00" GIT_COMMITTER_DATE="2023-06-20T14:30:00" git commit -m "JohnDoe: Add feature 1"
+
+echo "Bug fix" >> project.txt
+git add project.txt
+GIT_AUTHOR_DATE="2023-11-10T09:15:00" GIT_COMMITTER_DATE="2023-11-10T09:15:00" git commit -m "JohnDoe: Fix critical bug"
+
+git status
+git log --oneline -3
+
+git log --format="%an" | sort | uniq
+
+git log --author="JohnDoe" --since="2023-01-01" --until="2023-12-31"
+git log --author="JohnDoe" --since="2023-01-01" --until="2023-12-31" --oneline
+git log --author="JohnDoe" --since="2023-01-01" --until="2023-12-31" --oneline --graph
+git log --author="JohnDoe" --since="2023-01-01" --until="2023-12-31" --stat
+
+

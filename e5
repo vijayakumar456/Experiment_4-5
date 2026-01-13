@@ -1,0 +1,12 @@
+mkdir e5
+cd e5
+echo..git add..fit commit
+git clone <link>
+cd Experiment_4-5
+cd ..
+git remote add origin <link>
+git checkout -b feature-branch
+git checkout master
+git fetch origin
+git rebase origin/main
+git push --force origin master

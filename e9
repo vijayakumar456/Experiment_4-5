@@ -1,0 +1,2 @@
+git show <commit-id>
+git show -s --pretty=format:"%h - %an, %ar : %s" <commit-id>

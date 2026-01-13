@@ -1,0 +1,40 @@
+cd e12
+git init
+
+echo original content > prj.txt
+git add prj.txt
+git commit -m "initial"
+
+echo bad feature >> prj.txt
+git add prj.txt
+git commit -m "bad commit"
+
+echo good feature >> prj.txt
+git add prj.txt
+git commit -m "good commit"
+
+echo more work >> prj.txt
+git add prj.txt
+git commit -m "continue commit"
+
+git log --oneline -5
+
+git revert 4dcd0e3
+
+git log
+
+git revert 4dcd0e33b3d00b11e5ae9f76f65cf61733d4ef95
+
+git status
+
+git add prj.txt
+git revert --continue
+
+press Esc and type :wq
+
+git log --oneline
+
+cat prj.txt
+
+
+ 
